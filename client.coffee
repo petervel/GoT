@@ -52,7 +52,7 @@ renderMainPage = !->
 
 				Dom.div !->
 					tmp = episode.get('info', 'airDate')?.split('-')
-					airDate = new Date tmp[0], (+tmp[1] - 1), (+tmp[2] + 1)
+					airDate = new Date tmp[0], (+tmp[1] - 1), (+tmp[2] + 1) # added 1 day because it's not available til next day
 					delta = App.date().getTime() - airDate.getTime()
 					fontWeight = if delta > 0 and delta < (7*24*60*60*1000) then 'bold' else 'inherit'
 					deltas.push delta
