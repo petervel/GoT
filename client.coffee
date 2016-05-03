@@ -95,7 +95,7 @@ renderEpisode = (id) !->
 
 	if image = info.get 'image'
 		Dom.img !->
-			Dom.style margin: '20px auto', display: 'block'
+			Dom.style maxWidth: '90%', margin: '20px auto', display: 'block'
 			Dom.prop 'src', image
 
 	if airDate = info.get 'airDate'
